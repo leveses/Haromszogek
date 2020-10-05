@@ -40,6 +40,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_haromszoglista = new System.Windows.Forms.ListBox();
             this.btn_torol = new System.Windows.Forms.Button();
+            this.btn_fajlbol = new System.Windows.Forms.Button();
+            this.ofd_megnyitas = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,7 +105,7 @@
             // btn_kilepes
             // 
             this.btn_kilepes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_kilepes.Location = new System.Drawing.Point(159, 226);
+            this.btn_kilepes.Location = new System.Drawing.Point(333, 212);
             this.btn_kilepes.Name = "btn_kilepes";
             this.btn_kilepes.Size = new System.Drawing.Size(75, 23);
             this.btn_kilepes.TabIndex = 7;
@@ -151,7 +153,7 @@
             // btn_torol
             // 
             this.btn_torol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_torol.Location = new System.Drawing.Point(575, 226);
+            this.btn_torol.Location = new System.Drawing.Point(611, 212);
             this.btn_torol.Name = "btn_torol";
             this.btn_torol.Size = new System.Drawing.Size(75, 23);
             this.btn_torol.TabIndex = 11;
@@ -159,11 +161,29 @@
             this.btn_torol.UseVisualStyleBackColor = true;
             this.btn_torol.Click += new System.EventHandler(this.btn_torol_Click);
             // 
+            // btn_fajlbol
+            // 
+            this.btn_fajlbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_fajlbol.Location = new System.Drawing.Point(55, 212);
+            this.btn_fajlbol.Name = "btn_fajlbol";
+            this.btn_fajlbol.Size = new System.Drawing.Size(75, 23);
+            this.btn_fajlbol.TabIndex = 9;
+            this.btn_fajlbol.Text = "Beolvasás";
+            this.btn_fajlbol.UseVisualStyleBackColor = true;
+            this.btn_fajlbol.Click += new System.EventHandler(this.btn_fajlbol_Click);
+            // 
+            // ofd_megnyitas
+            // 
+            this.ofd_megnyitas.FileName = "openFileDialog1";
+            this.ofd_megnyitas.Filter = "TextFiles|*txt";
+            this.ofd_megnyitas.InitialDirectory = "C:\\Users\\c16bodaz\\source\\repos\\Haromszogek\\Haromszogek\\bin\\Debug";
+            // 
             // frm_fo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 261);
+            this.Controls.Add(this.btn_fajlbol);
             this.Controls.Add(this.btn_torol);
             this.Controls.Add(this.lb_haromszoglista);
             this.Controls.Add(this.panel1);
@@ -194,6 +214,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox lb_haromszoglista;
         private System.Windows.Forms.Button btn_torol;
+        private System.Windows.Forms.Button btn_fajlbol;
+        private System.Windows.Forms.OpenFileDialog ofd_megnyitas;
     }
 }
 
