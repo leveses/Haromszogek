@@ -113,10 +113,10 @@
             // 
             // btn_szamol
             // 
-            this.btn_szamol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_szamol.Location = new System.Drawing.Point(263, 46);
+            this.btn_szamol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_szamol.Location = new System.Drawing.Point(232, 84);
             this.btn_szamol.Name = "btn_szamol";
-            this.btn_szamol.Size = new System.Drawing.Size(75, 23);
+            this.btn_szamol.Size = new System.Drawing.Size(89, 40);
             this.btn_szamol.TabIndex = 8;
             this.btn_szamol.Text = "Számolás";
             this.btn_szamol.UseVisualStyleBackColor = true;
@@ -144,14 +144,14 @@
             this.lb_haromszoglista.ItemHeight = 24;
             this.lb_haromszoglista.Location = new System.Drawing.Point(402, 13);
             this.lb_haromszoglista.Name = "lb_haromszoglista";
-            this.lb_haromszoglista.Size = new System.Drawing.Size(216, 172);
+            this.lb_haromszoglista.Size = new System.Drawing.Size(391, 172);
             this.lb_haromszoglista.TabIndex = 10;
             this.lb_haromszoglista.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btn_torol
             // 
             this.btn_torol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_torol.Location = new System.Drawing.Point(476, 226);
+            this.btn_torol.Location = new System.Drawing.Point(575, 226);
             this.btn_torol.Name = "btn_torol";
             this.btn_torol.Size = new System.Drawing.Size(75, 23);
             this.btn_torol.TabIndex = 11;
@@ -163,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 261);
+            this.ClientSize = new System.Drawing.Size(805, 261);
             this.Controls.Add(this.btn_torol);
             this.Controls.Add(this.lb_haromszoglista);
             this.Controls.Add(this.panel1);

@@ -8,9 +8,9 @@ namespace Haromszogek
     internal class Haromszog
     {
         public List<string> adatok = new List<string>();
-        private int a_oldal;
-        private int b_oldal;
-        private int c_oldal;
+        private double a_oldal;
+        private double b_oldal;
+        private double c_oldal;
         public  double Terulet { get; private set; }
         public double Kerulet { get; private set; }
         public bool Szerkesztheto { get; private set; }
@@ -59,7 +59,7 @@ namespace Haromszogek
             
             return adatok;
         }
-        public Haromszog(int a_oldal, int b_oldal, int c_oldal)
+        public Haromszog(double a_oldal, double b_oldal, double c_oldal)
         {
             
             this.a_oldal = a_oldal;
