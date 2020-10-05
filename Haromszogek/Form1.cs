@@ -27,6 +27,7 @@ namespace Haromszogek
             tb_a_oldal.Text = a_oldal.ToString();
             tb_b_oldal.Text = b_oldal.ToString();
             tb_c_oldal.Text = c_oldal.ToString();
+            lb_haromszoglista.Items.Clear();
         }
 
         private void btn_kilepes_Click(object sender, EventArgs e)
@@ -40,14 +41,6 @@ namespace Haromszogek
             b_oldal = int.Parse(tb_b_oldal.Text);
             c_oldal = int.Parse(tb_c_oldal.Text);
 
-            StringBuilder szoveg = new StringBuilder();
-            szoveg.Append(" a: ");
-            szoveg.Append(a_oldal.ToString());
-            szoveg.Append(" b: ");
-            szoveg.Append(b_oldal.ToString());
-            szoveg.Append(" c: ");
-            szoveg.Append(c_oldal.ToString());
-            
             if (a_oldal == 0 || b_oldal == 0 || c_oldal == 0)
             {
                 MessageBox.Show("Valamelyik szám 0, kérem adjon meg egy másik számot!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -55,16 +48,32 @@ namespace Haromszogek
             else
             {
                 var h = new Haromszog(a_oldal, b_oldal, c_oldal);
-                if (h.Szerkesztheto)
-                {
-                    MessageBox.Show("Kerület: " + h.Kerulet + " Terület: " + h.Terulet);
-                }
-                else
-                {
-                    MessageBox.Show("Nem szerkeszthető belőle háromszög");
-                }
                 
+                List<string> adatok = h.AdatokSzoveg();
+
+                foreach (var i in adatok)
+                {
+                    lb_haromszoglista.Items.Add(i);
+                }
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_torol_Click(object sender, EventArgs e)
+        {
+            if (lb_haromszoglista.Items.Count > 0)
+            {
+                lb_haromszoglista.Items.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Nincs adat", "Hiba", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

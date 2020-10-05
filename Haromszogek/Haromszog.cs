@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace Haromszogek
 {
     internal class Haromszog
     {
+        public List<string> adatok = new List<string>();
         private int a_oldal;
         private int b_oldal;
         private int c_oldal;
@@ -42,6 +44,21 @@ namespace Haromszogek
             return eredmenyK;
         }
 
+        public List<string> AdatokSzoveg()
+        {
+            List<string> adatok = new List<string>();
+            adatok.Add($"a: {a_oldal} - b: {b_oldal} - c: {c_oldal}");
+            if (Szerkesztheto)
+            {
+                adatok.Add($" Kerület: { Kerulet} - Terület: { Terulet}");
+            }
+            else
+            {
+                adatok.Add("Nem szerkeszthető");
+            }
+            
+            return adatok;
+        }
         public Haromszog(int a_oldal, int b_oldal, int c_oldal)
         {
             
@@ -51,4 +68,5 @@ namespace Haromszogek
             Szerk();
         }
     }
+
 }
