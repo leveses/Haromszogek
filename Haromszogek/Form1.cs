@@ -55,7 +55,15 @@ namespace Haromszogek
             else
             {
                 var h = new Haromszog(a_oldal, b_oldal, c_oldal);
-                MessageBox.Show(szoveg.ToString(), "Ez most", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (h.Szerkesztheto)
+                {
+                    MessageBox.Show("Kerület: " + h.Kerulet + " Terület: " + h.Terulet);
+                }
+                else
+                {
+                    MessageBox.Show("Nem szerkeszthető belőle háromszög");
+                }
+                
             }
         }
     }

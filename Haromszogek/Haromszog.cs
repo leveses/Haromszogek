@@ -12,13 +12,14 @@ namespace Haromszogek
         public  double Terulet { get; private set; }
         public double Kerulet { get; private set; }
         public bool Szerkesztheto { get; private set; }
-        public double s { get; set; }
 
         private void Szerk()
         {
-            if (c_oldal > b_oldal+a_oldal && a_oldal > b_oldal + c_oldal && b_oldal > c_oldal + a_oldal)
+            if (c_oldal < b_oldal+a_oldal && a_oldal < b_oldal + c_oldal && b_oldal < c_oldal + a_oldal)
             {
                 Szerkesztheto = true;
+                Terulet = TeruletSzamitas();
+                Kerulet = KeruletSzamitas();
             }
             else
             {
@@ -29,21 +30,25 @@ namespace Haromszogek
         }
         
         
-        private double TeruletSzammitas(double eredmenyT)
+        private double TeruletSzamitas()
         {
-            s = (a_oldal + b_oldal + c_oldal) / 2;
+            double s = (a_oldal + b_oldal + c_oldal) / 2;
+            double eredmenyT = 0;
             return eredmenyT = Math.Sqrt(s * (s - a_oldal) * (s - b_oldal) * (s - c_oldal));
         }
-        private double KeruletSzammitas(double eredmenyK)
+        private double KeruletSzamitas()
         {
+            double eredmenyK = a_oldal + b_oldal + c_oldal;
             return eredmenyK;
         }
 
         public Haromszog(int a_oldal, int b_oldal, int c_oldal)
         {
+            
             this.a_oldal = a_oldal;
             this.b_oldal = b_oldal;
             this.c_oldal = c_oldal;
+            Szerk();
         }
     }
 }
