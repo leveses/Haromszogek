@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Haromszogek
 {
@@ -89,6 +90,27 @@ namespace Haromszogek
         {
             lb_haromszoglista.Items.Clear();
             ofd_megnyitas.ShowDialog();
+            string winDir = Environment.GetEnvironmentVariable("windir");
+            StreamReader olvas = new StreamReader("adatok.txt");
+            while (!olvas.EndOfStream)
+            {
+
+                string[] sor = olvas.ReadLine().Split(';');
+                
+                List<Haromszog> adatok = new List<Haromszog>();
+                adatok = lb_haromszoglista.Items.Add(new Haromszog(a_oldal = double.Parse(sor[0]), b_oldal = double.Parse(sor[1]), c_oldal = double.Parse(sor[2])));
+                foreach (var f in adatok)
+                {
+                    lb_haromszoglista.Items.Add(f);
+                }
+
+            }
+            olvas.Close();
+        }
+
+        private void tb_a_oldal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

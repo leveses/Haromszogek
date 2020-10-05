@@ -87,6 +87,7 @@
             this.tb_a_oldal.Name = "tb_a_oldal";
             this.tb_a_oldal.Size = new System.Drawing.Size(100, 29);
             this.tb_a_oldal.TabIndex = 4;
+            this.tb_a_oldal.TextChanged += new System.EventHandler(this.tb_a_oldal_TextChanged);
             // 
             // tb_c_oldal
             // 
@@ -176,7 +177,7 @@
             // 
             this.ofd_megnyitas.FileName = "openFileDialog1";
             this.ofd_megnyitas.Filter = "TextFiles|*txt";
-            this.ofd_megnyitas.InitialDirectory = "C:\\Users\\c16bodaz\\source\\repos\\Haromszogek\\Haromszogek\\bin\\Debug";
+            this.ofd_megnyitas.InitialDirectory = "C:\\Users\\User\\Source\\Repos\\Haromszogek\\Haromszogek";
             // 
             // frm_fo
             // 
